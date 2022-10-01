@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: venkatanarendrakurapati
+Build-Jdk: 11.0.15
+Implementation-Title: java task api challenge
+Implementation-Version: 1.0.0-SNAPSHOT
+Implementation-Vendor-Id: nz.co.challenge
+Implementation-URL: https://spring.io/projects/spring-boot/java-tasks-ap
+ i
+Created-By: Maven Integration for Eclipse
+

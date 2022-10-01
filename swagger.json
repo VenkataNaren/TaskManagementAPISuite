@@ -1,0 +1,219 @@
+{
+	"openapi": "3.0.1",
+	"info": {
+		"title": "OpenAPI definition",
+		"version": "v0"
+	},
+	"servers": [
+		{
+			"url": "http://localhost:8080",
+			"description": "Generated server url"
+		}
+	],
+	"paths": {
+		"/api/modifyTask": {
+			"put": {
+				"tags": [
+					"tasks-controller"
+				],
+				"summary": "This is to update  the Task in the database",
+				"operationId": "modifyTask",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Tasks"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"404": {
+						"description": " Page Not Found"
+					},
+					"200": {
+						"description": " Task details updated in database",
+						"content": {
+							"application/json": {
+								
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/addTask": {
+			"post": {
+				"tags": [
+					"tasks-controller"
+				],
+				"summary": "This is to add  the Tasks in the database",
+				"operationId": "addTask",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Tasks"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"404": {
+						"description": " Page Not Found"
+					},
+					"200": {
+						"description": " Task details saved in database",
+						"content": {
+							"application/json": {
+								
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/taskById/{id}": {
+			"get": {
+				"tags": [
+					"tasks-controller"
+				],
+				"summary": "This is to get  the details of particular  Task in the database",
+				"operationId": "getTaskById",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"404": {
+						"description": " Page Not Found"
+					},
+					"200": {
+						"description": " Task details fetched from database",
+						"content": {
+							"application/json": {
+								
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/allTasks": {
+			"get": {
+				"tags": [
+					"tasks-controller"
+				],
+				"summary": "This is to fetch All the Tasks stored in Db",
+				"operationId": "getAllTasks",
+				"responses": {
+					"200": {
+						"description": "Details of All the Tasks",
+						"content": {
+							"application/json": {
+								
+							}
+						}
+					},
+					"404": {
+						"description": "Page not found"
+					}
+				}
+			}
+		},
+		"/api/allOverdueTasks": {
+			"get": {
+				"tags": [
+					"tasks-controller"
+				],
+				"summary": "This is to fetch All the Overdue Tasks stored in Db",
+				"operationId": "getAllOverdueTasks",
+				"responses": {
+					"200": {
+						"description": "Details of All the Overdue Tasks",
+						"content": {
+							"application/json": {
+								
+							}
+						}
+					},
+					"404": {
+						"description": "Page not found"
+					}
+				}
+			}
+		},
+		"/api/deleteById/{id}": {
+			"delete": {
+				"tags": [
+					"tasks-controller"
+				],
+				"summary": "This is to delete  the Task in the database",
+				"operationId": "deleteById",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"404": {
+						"description": " Page Not Found"
+					},
+					"200": {
+						"description": " Task deleted from the database",
+						"content": {
+							"application/json": {
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"Tasks": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"title": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					},
+					"dueDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"status": {
+						"type": "string"
+					},
+					"creationDate": {
+						"type": "string",
+						"format": "date-time"
+					}
+				}
+			}
+		}
+	}
+}

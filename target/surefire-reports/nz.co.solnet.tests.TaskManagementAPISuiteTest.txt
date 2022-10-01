@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: nz.co.solnet.tests.TaskManagementAPISuiteTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in nz.co.solnet.tests.TaskManagementAPISuiteTest
+initializationError(nz.co.solnet.tests.TaskManagementAPISuiteTest)  Time elapsed: 0 s  <<< ERROR!
+org.junit.runners.model.InvalidTestClassError: 
+Invalid test class 'nz.co.solnet.tests.TaskManagementAPISuiteTest':
+  1. No runnable methods
+

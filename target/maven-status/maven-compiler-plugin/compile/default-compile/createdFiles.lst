@@ -1,0 +1,8 @@
+nz/co/solnet/BootstrapConfig.class
+nz/co/solnet/service/impl/TaskServiceImpl.class
+nz/co/solnet/utils/UtilsHelper.class
+nz/co/solnet/controller/TasksController.class
+nz/co/solnet/helper/DatabaseHelper.class
+nz/co/solnet/repo/TasksRepository.class
+nz/co/solnet/model/Tasks.class
+nz/co/solnet/service/TaskService.class
