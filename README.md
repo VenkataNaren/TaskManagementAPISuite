@@ -7,6 +7,4 @@ This project uses Jetty as an embedded container to host the web application.
 Goto the base folder of the application and execute the following command to launch the application.  
 'mvn spring-boot:run' 
 
-The application will be available at Swagger UI [http://localhost:8080/swagger-ui/index.html#/](http://localhost:8080/swagger-ui/index.html#/)  
- 
-You can replace the jetty plugin with something you feel comfortable using as well but make sure we have clear instructions to run your application.
+The application will be available at Swagger UI [http://localhost:8080/swagger-ui/index.html#/](http://localhost:8080/swagger-ui/index.html#/) 
