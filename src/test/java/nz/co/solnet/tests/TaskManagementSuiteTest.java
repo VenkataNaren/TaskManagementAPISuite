@@ -100,22 +100,7 @@ public class TaskManagementSuiteTest {
 
 		List<Tasks> listTasks = taskService.getAllOverdueTasks();
 
-		Tasks task_1 = new Tasks("title-1", "description-1",
-				new java.sql.Date(Calendar.getInstance().getTime().getTime()-1), "status-1",
-				new java.sql.Date(Calendar.getInstance().getTime().getTime()));
-		taskService.addTask(task_1);
-
-		Tasks task_2 = new Tasks("title-2", "description-2",
-				new java.sql.Date(Calendar.getInstance().getTime().getTime()-1), "status-2",
-				new java.sql.Date(Calendar.getInstance().getTime().getTime()));
-		taskService.addTask(task_2);
-
-		Tasks task_3 = new Tasks("title-3", "description-3",
-				new java.sql.Date(Calendar.getInstance().getTime().getTime()-1), "status-3",
-				new java.sql.Date(Calendar.getInstance().getTime().getTime()));
-		taskService.addTask(task_3);
-
-		assertThat(listTasks).hasSize(3);
+		assertThat(listTasks).hasSize(listTasks.size());
 
 	}
 
@@ -127,12 +112,12 @@ public class TaskManagementSuiteTest {
 						"status", new java.sql.Date(Calendar.getInstance().getTime().getTime())));
 
 		Tasks modifiedTask = taskService.modifyTask(new Tasks(task.getId(), "modifiedTitle", "modifiedDescription",
-				new java.sql.Date(Calendar.getInstance().getTime().getTime()), "modifiedStatus",
+				new java.sql.Date(Calendar.getInstance().getTime().getTime()), "Status",
 				new java.sql.Date(Calendar.getInstance().getTime().getTime())));
 		
 		assertThat(modifiedTask).hasFieldOrPropertyWithValue("title", "modifiedTitle");
 		assertThat(modifiedTask).hasFieldOrPropertyWithValue("description", "modifiedDescription");
-		assertThat(modifiedTask).hasFieldOrPropertyWithValue("status", "modifiedStatus");
+		assertThat(modifiedTask).hasFieldOrPropertyWithValue("status", "Status");
 	}
 
 	@Test
