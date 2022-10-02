@@ -85,7 +85,7 @@ public class TaskManagementAPISuiteTest {
 
 		_task.setDescription("Mock-description");
 
-		_task.setStatus("Mock-status");
+		_task.setStatus("Mock");
 
 		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSX").create();
 
@@ -98,7 +98,7 @@ public class TaskManagementAPISuiteTest {
 		mockMvc.perform(put("/api/modifyTask").contentType("application/json").content(taskJson))
 				.andExpect(status().isOk()).andExpect(jsonPath("$.title").value("Mock-title"))
 				.andExpect(jsonPath("$.description").value("Mock-description"))
-				.andExpect(jsonPath("$.status").value("Mock-status"));
+				.andExpect(jsonPath("$.status").value("Mock"));
 
 	}
 
